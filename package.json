@@ -1,0 +1,31 @@
+{
+  "name": "hw02-express-mongoose",
+  "version": "1.0.0",
+  "description": "wpt_courses HW_2",
+  "main": "app.js",
+  "type": "module",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node app",
+    "dev": "nodemon app"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/zhekaklimovych/hw02-express-mongoose.git"
+  },
+  "author": "your name",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/zhekaklimovych/hw02-express-mongoose/issues"
+  },
+  "homepage": "https://github.com/zhekaklimovych/hw02-express-mongoose#readme",
+  "devDependencies": {
+    "nodemon": "^2.0.19"
+  },
+  "dependencies": {
+    "cors": "^2.8.5",
+    "dotenv": "^16.0.1",
+    "express": "^4.18.1",
+    "mongoose": "^6.4.4"
+  }
+}
