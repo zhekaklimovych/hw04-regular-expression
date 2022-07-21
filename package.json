@@ -2,7 +2,7 @@
   "name": "hw02-express-mongoose",
   "version": "1.0.0",
   "description": "wpt_courses HW_2",
-  "main": "app.js",
+  "main": "src/app.js",
   "type": "module",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
@@ -20,7 +20,8 @@
   },
   "homepage": "https://github.com/zhekaklimovych/hw02-express-mongoose#readme",
   "devDependencies": {
-    "nodemon": "^2.0.19"
+    "nodemon": "^2.0.19",
+    "typescript": "^4.7.4"
   },
   "dependencies": {
     "cors": "^2.8.5",
