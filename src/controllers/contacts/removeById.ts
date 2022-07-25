@@ -1,8 +1,8 @@
-import Contact from "../../models/Contact.js";
+import Contact from "../../models/Contact";
+import {Request, Response} from "express";
+import { createError } from "../../helpers/index";
 
-import { createError } from "../../helpers/index.js";
-
-const removeById = async (req, res) => {
+const removeById = async (req: Request, res: Response): Promise<void> => {
     const { id } = req.params;
     const result = await Contact.findByIdAndRemove(id);
     if (!result) {

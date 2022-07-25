@@ -1,8 +1,8 @@
-import Contact from "../../models/Contact.js";
+import Contact from "../../models/Contact";
+import {Request, Response} from "express";
+import { createError } from "../../helpers/index";
 
-import { createError } from "../../helpers/index.js";
-
-const updateById = async (req, res) => {
+const updateById = async (req: Request, res: Response): Promise<void> => {
     const { id } = req.params;
     if(!id) {
         throw createError(404, "Not found");
