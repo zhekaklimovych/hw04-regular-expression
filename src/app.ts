@@ -11,7 +11,7 @@ export interface RequestError extends Error {
 }
 dotenv.config()
 
-const {DB_HOST = 'http://localhost:5001', PORT = 5000} = process.env;
+const {DB_HOST = 'http://localhost:3000', PORT = 3000} = process.env;
 
 const app: Express = express();
 

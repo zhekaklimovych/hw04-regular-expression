@@ -9,7 +9,7 @@ const mongoose_1 = __importDefault(require("mongoose"));
 const dotenv_1 = __importDefault(require("dotenv"));
 const contacts_js_1 = __importDefault(require("./routes/api/contacts.js"));
 dotenv_1.default.config();
-const { DB_HOST = 'http://localhost:5001', PORT = 5000 } = process.env;
+const { DB_HOST = 'http://localhost:3000', PORT = 3000 } = process.env;
 const app = (0, express_1.default)();
 app.use((0, cors_1.default)());
 app.use(express_1.default.json());

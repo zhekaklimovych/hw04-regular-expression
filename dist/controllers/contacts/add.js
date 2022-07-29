@@ -15,6 +15,12 @@ Object.defineProperty(exports, "__esModule", { value: true });
 const Contact_1 = __importDefault(require("../../models/Contact"));
 const add = (req, res) => __awaiter(void 0, void 0, void 0, function* () {
     const result = yield Contact_1.default.create(req.body);
-    res.status(201).json(result);
+    const contact = {
+        id: result.id,
+        name: result.name,
+        email: result.email,
+        phone: result.phone
+    };
+    res.status(201).json(contact);
 });
 exports.default = add;
