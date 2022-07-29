@@ -14,7 +14,7 @@ export interface IContact extends Document {
 const contactSchema = new Schema<IContact>({
     name: {type: String, required: true},
     email: {type: String, required: true, unique: true},
-    phone: {type: String, required: true, unique: true, match: /[0-9]{3} [0-9]{3}-[0-9]{4}/},
+    phone: {type: String, required: true, unique: true, match: /\([0-9]{3}\) [0-9]{3}-[0-9]{4}/},
     favorite: {type: Boolean, default: false}
 },{versionKey: false});
 

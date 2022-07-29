@@ -16,14 +16,13 @@ const Contact_1 = __importDefault(require("../../models/Contact"));
 const index_1 = require("../../helpers/index");
 const setFavorite = (req, res) => __awaiter(void 0, void 0, void 0, function* () {
     const { id } = req.params;
-    if (!id) {
+    const ID = yield Contact_1.default.findById(id);
+    if (!ID)
         throw (0, index_1.createError)(404, "Not found");
-    }
-    const result = yield Contact_1.default.findByIdAndUpdate(id, req.body, { new: true });
-    if (!result) {
+    const { favorite } = req.body;
+    if (favorite === undefined)
         throw (0, index_1.createError)(400, "missing field favorite");
-    }
-    result.favorite = !result.favorite;
+    const result = yield Contact_1.default.findByIdAndUpdate(id, req.body, { new: true });
     res.status(200).json(result);
 });
 exports.default = setFavorite;
