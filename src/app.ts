@@ -3,7 +3,7 @@ import cors from "cors";
 import mongoose from "mongoose";
 import dotenv from "dotenv";
 import {Request, Response, NextFunction} from "express";
-import ContactRouter from './routes/api/contacts.js';
+import UserRouter from './routes/api/users.js';
 
 export interface RequestError extends Error {
     status?: number,
@@ -17,7 +17,7 @@ const app: Express = express();
 
 app.use(cors());
 app.use(express.json());
-app.use('/api/contacts/', ContactRouter);
+app.use('/api/users/', UserRouter);
 
 app.use((req: Request, res: Response): void => {
     res.status(404).json({ message: "Not found" })

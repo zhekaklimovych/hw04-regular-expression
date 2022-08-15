@@ -3,4 +3,3 @@ export {default as getById} from "./getById";
 export {default as add} from "./add";
 export {default as updateById} from "./updateById";
 export {default as removeById} from "./removeById";
-export {default as setFavorite} from "./setFavorite";

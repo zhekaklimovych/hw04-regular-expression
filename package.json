@@ -1,7 +1,7 @@
 {
-  "name": "hw02-express-mongoose",
+  "name": "hw04-regular-expression",
   "version": "1.0.0",
-  "description": "wpt_courses HW_2",
+  "description": "wpt_courses HW_4",
   "main": "src/app.ts",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
@@ -9,16 +9,8 @@
     "dev": "nodemon ./dist/app",
     "watch": "tsc -w"
   },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/zhekaklimovych/hw02-express-mongoose.git"
-  },
-  "author": "your name",
+  "author": "Yevhenni Klimovych",
   "license": "ISC",
-  "bugs": {
-    "url": "https://github.com/zhekaklimovych/hw02-express-mongoose/issues"
-  },
-  "homepage": "https://github.com/zhekaklimovych/hw02-express-mongoose#readme",
   "devDependencies": {
     "@types/express": "^4.17.13",
     "@types/node": "^18.6.1",
