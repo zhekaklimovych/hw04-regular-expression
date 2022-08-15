@@ -9,7 +9,7 @@ export interface IUser {
     email: string,
     phone: string,
     passport: string,
-    // birthday: string,
+    birthday: string,
     id?: number
 }
 
@@ -18,15 +18,15 @@ const userSchema = new Schema<IUser>({
     email: {type: String, required: true, unique: true, match: /[a-zA-Z0-9]+@\w+\.[a-zA-Z0-9]+\.[a-zA-Z]+/},
     phone: {type: String, required: true, unique: true, match: /^\+\d\([0-9]{4}\) [0-9]{3}-[0-9]{2}-[0-9]{2}$/},
     passport: {type: String, required: true, match: /\d{9}/},
-    // birthday: {type: String, required: true}
+    birthday: {type: String, required: true}
 },{versionKey: false, timestamps: true});
 
 export const add = Joi.object({
     name: Joi.string().required(),
     email: Joi.string().required(),
     phone: Joi.string().required(),
-    passport: Joi.string().required()
-    // birthday: Joi.string().required()
+    passport: Joi.string().required(),
+    birthday: Joi.string().required()
 });
 
 const handleErrors = (error: RequestError, data: Document, next: NextFunction)=> {

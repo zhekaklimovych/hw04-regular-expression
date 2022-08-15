@@ -9,7 +9,7 @@ const add = async (req: Request, res: Response): Promise<void> => {
         email: result.email,
         phone: result.phone,
         passport: result.passport,
-        // birthday: result.birthday
+        birthday: result.birthday
     }
     res.status(201).json(user);
 }
