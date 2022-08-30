@@ -8,7 +8,7 @@ const mongoose_1 = __importDefault(require("mongoose"));
 const joi_1 = __importDefault(require("joi"));
 const { Schema, model } = mongoose_1.default;
 const userSchema = new Schema({
-    name: { type: String, required: true, match: /[a-zA-Zа-яА-Я]+/ },
+    name: { type: String, required: true, match: /[a-zA-Zа-яА-ЯїЇєЄ]+/ },
     email: { type: String, required: true, unique: true, match: /[a-zA-Z0-9]+@\w+\.[a-zA-Z0-9]+\.[a-zA-Z]+/ },
     phone: { type: String, required: true, unique: true, match: /^\+\d\([0-9]{4}\) [0-9]{3}-[0-9]{2}-[0-9]{2}$/ },
     passport: { type: String, required: true, match: /\d{9}/ },
